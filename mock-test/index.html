@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CBT Mock Test</title>
+    <link rel="stylesheet" href="../app.css">
+    <style>
+      .exam {
+        display:grid;
+        grid-template-columns:1fr 255px;
+        gap:18px
+      }
+      .examtop {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:15px
+      }
+      .timer {
+        font:700 22px ui-monospace,monospace;
+        color:#c54d35
+      }
+      .qmeta {
+        font-size:12px;
+        color:var(--muted)
+      }
+      .question {
+        font-size:21px;
+        line-height:1.45;
+        margin:26px 0
+      }
+      .option {
+        display:flex;
+        gap:12px;
+        padding:14px;
+        border:1px solid var(--line);
+        border-radius:10px;
+        margin:9px 0;
+        cursor:pointer;
+        align-items:center
+      }
+      .option:has(input:checked) {
+        border-color:var(--blue);
+        background:#f1f6ff
+      }
+      .palette {
+        display:grid;
+        grid-template-columns:repeat(5,1fr);
+        gap:7px
+      }
+      .palette button {
+        height:39px;
+        border:1px solid var(--line);
+        border-radius:8px;
+        background:white;
+        cursor:pointer;
+        font-weight:700;
+        color:#64738a
+      }
+      .palette button.current {
+        outline:2px solid var(--blue)
+      }
+      .palette button.answered {
+        background:#d7f3e4;
+        color:#116a47
+      }
+      .palette button.review {
+        background:#fff0cb;
+        color:#8b5b00
+      }
+      .palette button.answered.review {
+        background:linear-gradient(135deg,#d7f3e4 50%,#fff0cb 50%)
+      }
+      .examfoot {
+        display:flex;
+        justify-content:space-between;
+        gap:8px;
+        margin-top:24px
+      }
+      .result-score {
+        font-size:44px;
+        font-weight:800;
+        letter-spacing:-.06em
+      }
+      .resrow {
+        padding:12px 0;
+        border-bottom:1px solid var(--line);
+        font-size:13px
+      }
+      .summary {
+        display:flex;
+        gap:10px;
+        margin:12px 0
+      }
+      .summary div {
+        flex:1;
+        padding:13px;
+        background:#f5f7fa;
+        border-radius:10px
+      }
+      .summary strong {
+        display:block;
+        font-size:19px
+      }
+      .summary small {
+        color:var(--muted)
+      }
+      @media(max-width:750px) {
+        .exam {
+          grid-template-columns:1fr
+        }
+        .exam aside {
+          order:-1
+        }
+        .palette {
+          grid-template-columns:repeat(8,1fr)
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bar">
+      <a href="../">← Build Lab</a>
+      <span class="meta">PROJECT 04 · WEB TOOL</span>
+      <a href="../sample-questions.json" class="home-link" download>Sample question file ↓</a>
+    </header>
+    <main class="wrap">
+      <div class="head">
+        <div>
+          <div class="kicker">PRACTICE UNDER EXAM CONDITIONS</div>
+          <h1>CBT Mock Test</h1>
+          <p>Load a question JSON, start the timer, and your progress autosaves on this device.</p>
+        </div>
+        <div class="actions">
+          <label class="btn secondary" for="file">Load questions</label>
+          <input id="file" type="file" accept="application/json" hidden>
+          <button class="btn" id="start">Start test</button>
+        </div>
+      </div>
+      <div id="root"></div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+

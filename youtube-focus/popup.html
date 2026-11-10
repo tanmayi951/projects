@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Focus Board</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="logo">F</span>
+        <div>
+          <b>Focus Board</b>
+          <small>YOUTUBE STUDY SPACE</small>
+        </div>
+      </div>
+      <span class="live">LOCAL</span>
+    </header>
+    <main>
+      <section class="intent">
+        <div class="label">YOUR STUDY INTENTION</div>
+        <div class="row"><input id="why" placeholder="What are you here to study?"><button id="unlock">Unlock 60m</button></div>
+        <small id="gateState">YouTube stays focused while you study.</small>
+      </section>
+      <section class="stats">
+        <div>
+          <b id="today">0m</b>
+          <small>STUDY TIME TODAY</small>
+        </div>
+        <div>
+          <b id="videoCount">0</b>
+          <small>VIDEOS IN LIST</small>
+        </div>
+      </section>
+      <section class="settings">
+        <div class="label">REMOVE DISTRACTIONS</div>
+        <label><input type="checkbox" id="shorts"><span>Shorts</span></label>
+        <label><input type="checkbox" id="recs"><span>Recommendations</span></label>
+        <label><input type="checkbox" id="comments"><span>Comments</span></label>
+      </section>
+      <section>
+        <div class="sectionTitle">
+          <h2>Study list</h2>
+          <button class="text" id="addVideo">＋ Current video</button>
+        </div>
+        <div id="videos" class="list"></div>
+      </section>
+      <section>
+        <div class="sectionTitle">
+          <h2>Timestamp notes</h2>
+          <button class="text" id="addNote">＋ At current time</button>
+        </div>
+        <input id="noteText" class="noteInput" placeholder="Note about this moment…">
+        <div id="notes" class="list"></div>
+      </section>
+      <div class="toast" id="toast"></div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
+

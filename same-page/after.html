@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#172d40">
+    <title>Northstar Fest · After</title>
+    <style>
+      :root {
+        --navy:#172d40;
+        --orange:#f27d52;
+        --cream:#fff9f0;
+        --muted:#5e6e78
+      }
+      * {
+        box-sizing:border-box
+      }
+      body {
+        margin:0;
+        background:var(--cream);
+        color:var(--navy);
+        font-family:Arial,Helvetica,sans-serif
+      }
+      .nav {
+        height:72px;
+        max-width:1120px;
+        margin:auto;
+        padding:0 24px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between
+      }
+      .logo {
+        font-size:12px;
+        letter-spacing:.16em;
+        font-weight:bold
+      }
+      .nav a {
+        font-size:12px;
+        color:var(--navy);
+        text-decoration:none
+      }
+      .hero {
+        max-width:1120px;
+        margin:0 auto;
+        padding:45px 24px 66px;
+        display:grid;
+        grid-template-columns:1.1fr .9fr;
+        gap:44px;
+        align-items:center
+      }
+      .eyebrow {
+        font-size:10px;
+        letter-spacing:.17em;
+        color:#c85d36;
+        font-weight:bold
+      }
+      .title {
+        font-size:clamp(50px,8vw,92px);
+        line-height:.93;
+        letter-spacing:-.075em;
+        margin:20px 0
+      }
+      .copy {
+        font-size:18px;
+        line-height:1.6;
+        color:var(--muted);
+        max-width:450px
+      }
+      .button {
+        display:inline-flex;
+        margin-top:15px;
+        background:var(--orange);
+        color:#fff;
+        text-decoration:none;
+        font-size:13px;
+        font-weight:bold;
+        padding:15px 19px;
+        border-radius:8px;
+        box-shadow:0 7px 0 #d86740
+      }
+      .art {
+        height:360px;
+        border-radius:46% 46% 18px 18px;
+        background:linear-gradient(150deg,#f6c763 0 46%,#df7457 46% 72%,#233e55 72%);
+        position:relative;
+        overflow:hidden
+      }
+      .sun {
+        position:absolute;
+        width:125px;
+        height:125px;
+        border-radius:50%;
+        background:#fff0c6;
+        top:42px;
+        right:57px
+      }
+      .star {
+        position:absolute;
+        color:#fff9e8;
+        font-size:30px
+      }
+      .star.one {
+        top:45px;
+        left:45px
+      }
+      .star.two {
+        top:120px;
+        left:105px
+      }
+      .stage {
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        height:105px;
+        background:#244255;
+        border-radius:50% 50% 0 0/30% 30% 0 0
+      }
+      .stage:after {
+        content:'✦     ♪       ✦';
+        position:absolute;
+        top:31px;
+        left:0;
+        right:0;
+        text-align:center;
+        color:#f8df9a;
+        font-size:24px;
+        letter-spacing:24px
+      }
+      .events {
+        background:#fff;
+        padding:40px 24px 54px
+      }
+      .events-inner {
+        max-width:1072px;
+        margin:auto
+      }
+      .events h2 {
+        font-size:25px;
+        letter-spacing:-.04em;
+        margin:0 0 18px
+      }
+      .cards {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:12px
+      }
+      .card {
+        border:1px solid #e9e2d7;
+        border-radius:12px;
+        padding:18px;
+        background:#fffdf8
+      }
+      .card h3 {
+        font-size:15px;
+        margin:10px 0 5px
+      }
+      .foot {
+        max-width:1072px;
+        margin:35px auto 0;
+        padding:0 24px;
+        display:flex;
+        justify-content:space-between;
+        font-size:12px;
+        color:var(--muted)
+      }
+      @media(max-width:700px) {
+        .hero {
+          grid-template-columns:1fr;
+          gap:28px;
+          padding-top:28px
+        }
+        .art {
+          height:260px
+        }
+        .cards {
+          grid-template-columns:1fr
+        }
+        .nav {
+          height:60px
+        }
+        .foot {
+          gap:8px;
+          flex-direction:column
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <span class="logo">NORTHSTAR&nbsp; / &nbsp;CAMPUS</span>
+      <a href="#register">Festival details ↓</a>
+    </nav>
+    <main class="hero">
+      <div>
+        <div class="eyebrow">NORTHSTAR COLLEGE · 21 NOVEMBER 2026</div>
+        <h1 class="title">Northstar<br>Fest 2026</h1>
+        <p class="copy">A day for ideas, music and making things together.</p>
+        <a class="button" href="#register">Register for the festival&nbsp; ↗</a>
+      </div>
+      <div class="art" aria-hidden="true">
+        <span class="sun"></span>
+        <span class="star one">✳</span>
+        <span class="star two">✦</span>
+        <div class="stage"></div>
+      </div>
+    </main>
+    <section class="events">
+      <div class="events-inner">
+        <h2>Make a day of it</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Robotics showcase</h3>
+          </article>
+          <article class="card">
+            <h3>Live music</h3>
+          </article>
+          <article class="card">
+            <h3>Student market</h3>
+          </article>
+        </div>
+      </div>
+      <div id="register" class="foot">
+        <b>Join us on campus</b>
+        <span>Saturday, 21 November · 10:00 am to 8:00 pm</span>
+      </div>
+    </section>
+  </body>
+</html>
+
+

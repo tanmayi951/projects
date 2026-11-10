@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="../app.css">
+  </head>
+  <body>
+    <header class="bar">
+      <a href="../">← Build Lab</a>
+      <span class="meta">PROJECT 03 · WEB TOOL</span>
+      <span class="badge">● SAVED ON THIS DEVICE</span>
+    </header>
+    <main class="wrap">
+      <div class="head">
+        <div>
+          <div class="kicker">YOUR DETAILS, YOUR FILE</div>
+          <h1>Resume Builder</h1>
+          <p>Edit your details and see the A4 preview update instantly. Print to PDF to export selectable text.</p>
+        </div>
+        <div class="actions controls">
+          <button class="btn secondary" id="export">Save data</button>
+          <label class="btn secondary" for="importFile">Load data</label>
+          <input id="importFile" type="file" accept="application/json" hidden>
+          <button class="btn" onclick="window.print()">Export PDF</button>
+        </div>
+      </div>
+      <div class="layout">
+        <section class="panel editor">
+          <h2>Resume details</h2>
+          <div class="field"><label for="name">Full name</label><input id="name" data-key="name"></div>
+          <div class="row">
+            <div class="field"><label>Email</label><input id="email" data-key="email"></div>
+            <div class="field"><label>Phone</label><input id="phone" data-key="phone"></div>
+          </div>
+          <div class="field"><label>Location · LinkedIn · Website</label><input id="links" data-key="links"></div>
+          <div class="field">
+            <label>Profile</label>
+            <textarea id="profile" data-key="profile"></textarea>
+          </div>
+          <div class="field">
+            <label>Experience</label>
+            <textarea id="experience" data-key="experience"></textarea>
+          </div>
+          <div class="field">
+            <label>Projects</label>
+            <textarea id="projects" data-key="projects"></textarea>
+          </div>
+          <div class="field">
+            <label>Education</label>
+            <textarea id="education" data-key="education"></textarea>
+          </div>
+          <div class="field">
+            <label>Skills</label>
+            <textarea id="skills" data-key="skills"></textarea>
+          </div>
+          <div class="field">
+            <label>Template</label>
+            <select id="template">
+              <option value="tpl-1">01 · Clean editorial</option>
+              <option value="tpl-2">02 · Warm accent</option>
+              <option value="tpl-3">03 · Classic serif</option>
+            </select>
+          </div>
+          <p class="hint">Use one item per line for experience, projects, education and skills. Reorder sections with the arrows on the preview.</p>
+          <div class="status" id="status"></div>
+        </section>
+        <section id="preview" class="preview"></section>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+

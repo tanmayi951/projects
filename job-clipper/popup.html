@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Job Clipper</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <a href="board.html" target="_blank" class="logo">JC</a>
+      <div>
+        <b>Job Clipper</b>
+        <small>YOUR APPLICATION BOARD</small>
+      </div>
+      <a class="boardLink" href="board.html" target="_blank">Open board ↗</a>
+    </header>
+    <main>
+      <div class="kicker">CLIP THIS JOB</div>
+      <p class="hint">We filled what we could from the current tab. Edit every field before saving.</p>
+      <label>Role<input id="role"></label>
+      <label>Company<input id="company"></label>
+      <label>Job link<input id="url"></label>
+      <label>Deadline<input id="deadline" type="date"></label>
+      <button class="save" id="save">Save to board</button>
+      <div id="status"></div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
+
